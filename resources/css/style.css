@@ -124,12 +124,15 @@ nav {
 
 
 /*offer*/
+.oferta{
+  background: linear-gradient(#ceccff, #e0ffe0);
+}
 .offer{
   color: #6a6489;
   text-align: center;
   font-size: 1.5rem;
-  margin-top: 3rem;
-  padding-top: 3rem;
+  padding-top: 4rem;
+
 }
 .offerp{
   color: #6a6489;
@@ -154,7 +157,7 @@ nav {
   align-items: center;
 }
 
-img {
+.oferta img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -166,7 +169,7 @@ img {
     border-radius: 4px;
 }
 
-img:hover{
+.oferta img:hover{
   cursor: pointer;
   opacity: 1;
   transform: scale(1.1);
@@ -201,4 +204,28 @@ img:hover{
 .about p {
   width: 65%;
   font-size: 1.3rem;
+}
+
+.portfolio {
+  background-color: blue;
+  min-height: 100vh;
+  overflow-x: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 5rem;
+  text-align: center;
+}
+.portfolio h1{
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.slider{
+max-width: 90%;
+margin-left: auto;
+margin-right: auto;
+}
+
+.slider img{
+  border-radius: 5px;
 }
