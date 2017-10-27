@@ -186,7 +186,19 @@ img:hover{
   line-height: 100%;
 }
 
-.test {
+.about {
   min-height: 100vh;
-  background-color: black;
+  background-image: url('../../resources/images/me.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
+}
+
+.about p {
+  width: 65%;
+  font-size: 1.3rem;
 }
