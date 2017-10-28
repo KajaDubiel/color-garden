@@ -68,7 +68,7 @@ nav {
 
 }
 
-.header a:active {
+.header a:active, .header a:visited {
   text-decoration: underline;
   opacity: 1;
 }
@@ -85,6 +85,10 @@ nav {
 
   .mobile-icon{
     display: block;
+  }
+
+  .mobile-icon:active, .mobile-icon:visited{
+    color: #d1f7f9;
   }
 }
 
@@ -129,9 +133,6 @@ nav {
   .land h1 {
     font-size: 2.5rem;
     margin-bottom: 0.6rem;
-    margin-left: auto;
-    margin-left: auto;
-    text-align: center;
   }
 
   .land p {
@@ -170,7 +171,10 @@ nav {
     align-items: center;
   }
 
-
+  .land h1{
+    border: solid yellow;
+    text-align: center;
+  }
 }
 
 @media only screen and (max-width: 600px){
@@ -190,6 +194,10 @@ nav {
     margin-right: auto;
   }
 
+  .text h1{
+    text-align: center;
+  }
+
   .land p{
   margin: 0.6rem 1rem 1rem 1rem;
   }
@@ -201,6 +209,7 @@ nav {
   background-color: #dcdce8;
   color: #212123;
   flex-direction: column;
+  min-height: 100vh;
 }
 .offer{
   /*color: white;*/
@@ -213,7 +222,7 @@ nav {
 .offerp{
   /*color: #6a6489;*/
   font-size: 1.3rem;
-  margin: 1rem auto 3rem auto;
+  margin: 1rem auto 2rem auto;
   opacity: 0.8;
   text-align: center;
   width: 75%;
@@ -223,10 +232,8 @@ nav {
 .images{
   flex-wrap: wrap;
   overflow: hidden;
-  margin: 0 4rem;
+  margin: 0 1rem;
   justify-content: center;
-  min-height: 85vh;
-  border: solid yellow;
 }
 
 .element{
@@ -286,20 +293,46 @@ nav {
 
 @media only screen and (max-width: 800px){
   .images{
-    flex-direction: column;
-    margin: 0;
+  /*  flex-direction: column;*/
+    margin: 0 0 1rem 0;
     align-items: center;
+    justify-content: space-around;
   }
 
   .element{
-    border: solid pink;
-    max-width: 100%;
-    margin: 0;
+    max-width: 40%;
+    margin: 0 auto 1rem auto;
     padding: 0;
+  }
+
+  .offer{
+    padding-top: 3rem;
   }
 
   .offerp{
     width: 90%;
+    margin: 1rem auto 1rem auto;
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+  .offer{
+    font-size: 1.3rem;
+  }
+
+  .offerp, .textsm h2{
+    font-size: 1rem;
+    margin-top: 0.4rem;
+  }
+  .element{
+    max-width: 100%;
+  }
+
+  .oferta img {
+    opacity: 1;
+    transition: none !important;
+    transform: none !important;
   }
 }
 
@@ -308,7 +341,10 @@ nav {
 .about {
   min-height: 100vh;
   background-color: dimgray;
-  background-image: url('../../resources/images/me.jpg');
+  background: linear-gradient(
+                       rgba(0, 0, 0, 0.4),
+                       rgba(0, 0, 0, 0.4)),
+                       url('../../resources/images/me.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -324,6 +360,14 @@ nav {
   text-align: center;
 }
 
+
+@media only screen and (max-width: 800px){
+  .about p{
+    width: 90%;
+  }
+}
+
+/*portfolio*/
 .portfolio {
   background-color: #b0b0ba;
   min-height: 100vh;
@@ -332,6 +376,7 @@ nav {
   box-sizing: border-box;
   padding-top: 5rem;
   text-align: center;
+
 }
 .portfolio h1{
   font-size: 2rem;
@@ -345,12 +390,15 @@ max-width: 90%;
 margin-left: auto;
 margin-right: auto;
 text-align: center;
+border: none;
+padding-bottom: 2rem;
 }
 
 .slider img{
   border-radius: 5px;
   margin-left: auto;
   margin-right: auto;
+  max-width: 100%;
 }
 
 /*footer*/
@@ -363,7 +411,6 @@ background: linear-gradient(
 background-size: cover;
 background-position: center;
 background-attachment: fixed;
-
 flex-direction: column;
 align-items: center;
 justify-content: center;
