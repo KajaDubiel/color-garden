@@ -172,12 +172,11 @@ nav {
   }
 
   .land h1{
-    border: solid yellow;
     text-align: center;
   }
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 600px) and (orientation: portrait){
   .land{
     background: linear-gradient(
                          rgba(0, 0, 0, 0.4),
@@ -187,8 +186,10 @@ nav {
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-  }
 
+  }
+}
+@media only screen and (max-width: 600px){
   .text{
     margin-left: auto;
     margin-right: auto;
@@ -317,23 +318,31 @@ nav {
 }
 
 @media only screen and (max-width: 600px) {
-  .offer{
-    font-size: 1.3rem;
+  .oferta{
+    align-items: center;
+    justify-content: center;
   }
 
-  .offerp, .textsm h2{
-    font-size: 1rem;
+  .offer{
+    font-size: 1.5rem;
+    }
+
+  .offerp{
+    font-size: 1.3rem;
     margin-top: 0.4rem;
   }
-  .element{
+  /*.element{
     max-width: 100%;
-  }
+  }*/
 
-  .oferta img {
+  .images{
+    display: none;
+  }
+/*  .oferta img {
     opacity: 1;
     transition: none !important;
     transform: none !important;
-  }
+  }*/
 }
 
 
@@ -432,3 +441,8 @@ footer a:hover{
   background-color: rgba(0, 0, 0, 0.5);
   transition: background-color ease-out 0.4s;
 }
+
+/*dodac wersję dla portrait orientation
+zrobić logo/dodac logo
+wersja mobilna - pomyslec nad rozwijanym menu
+*/
